@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Spray Foam Solutions LLC | Insulation That Holds Up</title>
+<meta name="description" content="Spray Foam Solutions LLC — commercial and residential spray foam insulation. Air-sealed, energy-efficient, built to last." />
+
+<style>
+  /* ============================================
+     RESET + BASE — no external fonts/CDN needed.
+     Uses system font stacks that look great by default.
+     ============================================ */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  :root {
+    --blue: #006BB6;
+    --blue-dark: #004D85;
+    --orange: #F58426;
+    --orange-dark: #D86A0E;
+    --steel: #bfc1c2;
+    --steel-dark: #8C8F90;
+    --ink: #0A0A0A;
+    --black: #000000;
+    --white: #ffffff;
+
+    --font-display: 'Arial Black', 'Helvetica Neue', Impact, sans-serif;
+    --font-chunky: 'Arial Black', 'Helvetica Neue', Impact, sans-serif;
+    --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: 'Courier New', Courier, monospace;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--ink);
+    color: var(--white);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  ul { list-style: none; }
+  button, input, textarea, select { font-family: inherit; font-size: inherit; color: inherit; }
+
+  ::selection { background: var(--orange); color: var(--ink); }
+
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+    outline: 3px solid var(--orange);
+    outline-offset: 2px;
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  .font-chunky { font-family: var(--font-chunky); font-weight: 900; }
+  .font-mono { font-family: var(--font-mono); }
+
+  .container { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+
+  /* ============ Layout helpers ============ */
+  .flex { display: flex; }
+  .grid { display: grid; }
+  .items-center { align-items: center; }
+  .justify-between { justify-content: space-between; }
+  .justify-center { justify-content: center; }
+  .text-center { text-align: center; }
+  .relative { position: relative; }
+  .overflow-hidden { overflow: hidden; }
+
+  /* ============ Spray dot texture (signature element) ============ */
+  .spray-texture {
+    background-image: radial-gradient(circle, rgba(245,132,38,0.55) 1.4px, transparent 1.6px);
+    background-size: 14px 14px;
+  }
+  .spray-texture-blue {
+    background-image: radial-gradient(circle, rgba(0,107,182,0.45) 1.4px, transparent 1.6px);
+    background-size: 14px 14px;
+  }
+  .spray-fade {
+    -webkit-mask-image: radial-gradient(ellipse 70% 70% at 30% 40%, black 0%, transparent 75%);
+    mask-image: radial-gradient(ellipse 70% 70% at 30% 40%, black 0%, transparent 75%);
+  }
+
+  .badge-notch {
+    clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+  }
+
+  /* ============ Top utility bar ============ */
+  .topbar {
+    background: var(--blue-dark);
+    color: var(--steel);
+    font-size: 12px;
+    font-family: var(--font-mono);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .topbar .container { height: 36px; display: flex; align-items: center; justify-content: space-between; }
+  .topbar-left { display: flex; align-items: center; gap: 24px; }
+  .topbar-left span { display: flex; align-items: center; gap: 6px; }
+  .dot-orange { width: 6px; height: 6px; border-radius: 50%; background: var(--orange); display: inline-block; }
+  .topbar-right { display: flex; align-items: center; gap: 16px; margin-left: auto; }
+  .topbar a:hover { color: var(--white); }
+  .sep { color: var(--steel-dark); }
+
+  @media (max-width: 640px) {
+    .topbar-left { display: none; }
+  }
+
+  /* ============ Header / Nav ============ */
+  header.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(10,10,10,0.95);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    transition: box-shadow 0.2s ease;
+  }
+  nav.navbar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand img {
+    height: 56px; width: 56px; border-radius: 50%;
+    background: white; object-fit: cover;
+    box-shadow: 0 0 0 2px rgba(245,132,38,0.7);
+    transition: box-shadow 0.2s ease;
+  }
+  .brand:hover img { box-shadow: 0 0 0 2px var(--orange); }
+  .brand-text { line-height: 1.1; }
+  .brand-title { font-family: var(--font-chunky); font-weight: 900; font-size: 18px; letter-spacing: -0.01em; }
+  .brand-sub { font-family: var(--font-mono); font-size: 10px; color: var(--orange); letter-spacing: 0.25em; }
+
+  .nav-links { display: flex; align-items: center; gap: 36px; font-size: 14px; font-weight: 600; color: var(--steel); }
+  .nav-links a { position: relative; transition: color 0.2s ease; padding-bottom: 6px; }
+  .nav-links a::after {
+    content: ''; position: absolute; left: 0; bottom: 0; width: 0%; height: 2px;
+    background: var(--orange); transition: width 0.25s ease;
+  }
+  .nav-links a:hover { color: var(--white); }
+  .nav-links a:hover::after { width: 100%; }
+
+  .btn {
+    font-family: var(--font-chunky);
+    font-weight: 900;
+    font-size: 13px;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+  .btn-orange {
+    background: var(--orange); color: var(--ink);
+    padding: 12px 24px;
+  }
+  .btn-orange:hover { background: var(--orange-dark); }
+  .btn-outline {
+    background: transparent; border: 2px solid rgba(255,255,255,0.3); color: var(--white);
+    padding: 12px 24px;
+  }
+  .btn-outline:hover { border-color: var(--white); }
+
+  .nav-cta { display: none; }
+  @media (min-width: 1024px) {
+    .nav-links { display: flex; }
+    .nav-cta { display: block; }
+    .menu-btn { display: none; }
+  }
+  @media (max-width: 1023px) {
+    .nav-links { display: none; }
+  }
+
+  .menu-btn {
+    display: flex; flex-direction: column; gap: 6px; padding: 8px;
+    background: none; border: none; cursor: pointer;
+  }
+  .menu-btn span { width: 28px; height: 2px; background: white; transition: transform 0.25s ease, opacity 0.25s ease; }
+
+  .mobile-menu {
+    max-height: 0; opacity: 0; overflow: hidden;
+    background: var(--ink); border-top: 1px solid rgba(255,255,255,0.1);
+    transition: max-height 0.35s ease, opacity 0.25s ease;
+  }
+  .mobile-menu-inner { padding: 20px; display: flex; flex-direction: column; gap: 16px; font-weight: 600; color: var(--steel); }
+  .mobile-menu-inner a.cta-mobile { text-align: center; }
+
+  /* ============ Hero ============ */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--blue-dark), var(--blue), var(--blue-dark));
+  }
+  .hero-bg-texture { position: absolute; inset: 0; pointer-events: none; }
+  .hero-glow {
+    position: absolute; top: -96px; right: -96px; width: 480px; height: 480px;
+    border-radius: 50%; background: rgba(245,132,38,0.1); filter: blur(60px);
+  }
+  .hero-inner {
+    position: relative;
+    padding: 64px 0 96px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+  @media (min-width: 1024px) {
+    .hero-inner { grid-template-columns: 1fr 1fr; padding: 96px 0 128px; }
+  }
+
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.2em;
+    color: var(--orange);
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15);
+    padding: 8px 16px; margin-bottom: 28px;
+  }
+  .pulse-dot {
+    width: 8px; height: 8px; border-radius: 50%; background: var(--orange);
+    animation: pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+  h1.hero-title {
+    font-size: 48px; line-height: 0.95; margin-bottom: 24px;
+  }
+  @media (min-width: 640px) { h1.hero-title { font-size: 60px; } }
+  @media (min-width: 1024px) { h1.hero-title { font-size: 72px; } }
+  .hero-title .accent { color: var(--orange); }
+
+  .hero-sub { color: var(--steel); font-size: 18px; max-width: 420px; margin-bottom: 36px; line-height: 1.6; }
+
+  .hero-ctas { display: flex; flex-wrap: wrap; gap: 16px; }
+
+  .hero-stats {
+    display: flex; align-items: center; gap: 32px; margin-top: 48px; padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+  .stat-num { font-family: var(--font-display); font-size: 30px; text-transform: none; }
+  .stat-label { font-family: var(--font-mono); font-size: 11px; color: var(--steel); letter-spacing: 0.05em; }
+  .stat-sep { width: 1px; height: 40px; background: rgba(255,255,255,0.2); }
+
+  .hero-art { position: relative; display: flex; justify-content: center; }
+  @media (min-width: 1024px) { .hero-art { justify-content: flex-end; } }
+  .hero-art-glow {
+    position: absolute; inset: 0; margin: auto; width: 420px; height: 420px; max-width: 100%;
+    border-radius: 50%; background: rgba(255,255,255,0.05); filter: blur(40px);
+  }
+  .hero-art-card {
+    position: relative; background: white; border-radius: 24px; padding: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+    transform: rotate(1deg);
+    transition: transform 0.5s cubic-bezier(.2,.8,.2,1);
+  }
+  .hero-art-card:hover { transform: rotate(0deg); }
+  .hero-art-card img { width: 280px; }
+  @media (min-width: 640px) { .hero-art-card img { width: 320px; } .hero-art-card { padding: 32px; } }
+  @media (min-width: 1024px) { .hero-art-card img { width: 380px; } }
+
+  .hero-tag {
+    display: none;
+    position: absolute; bottom: -20px; left: -20px;
+    background: var(--ink); border: 1px solid rgba(255,255,255,0.15);
+    padding: 12px 20px; align-items: center; gap: 12px;
+  }
+  @media (min-width: 640px) { .hero-tag { display: flex; } }
+  .hero-tag-num { font-family: var(--font-chunky); color: var(--orange); font-size: 20px; }
+  .hero-tag-label { font-family: var(--font-mono); font-size: 11px; color: var(--steel); line-height: 1.2; }
+
+  /* ticker */
+  .ticker-wrap {
+    position: relative; background: var(--ink); border-top: 1px solid rgba(255,255,255,0.1);
+    overflow: hidden; white-space: nowrap;
+  }
+  .ticker-track { display: inline-flex; padding: 12px 0; animation: ticker 28s linear infinite; }
+  .ticker-group { display: flex; align-items: center; gap: 40px; padding: 0 20px; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.2em; color: var(--steel); }
+  @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* ============ Section shared ============ */
+  section { padding: 96px 0; }
+  .section-border-top { border-top: 1px solid rgba(255,255,255,0.1); }
+  .eyebrow-label { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.25em; color: var(--orange); margin-bottom: 12px; }
+  h2.section-title { font-size: 36px; line-height: 1.1; }
+  @media (min-width: 640px) { h2.section-title { font-size: 48px; } }
+
+  .section-head {
+    display: flex; flex-direction: column; gap: 24px;
+    justify-content: space-between; margin-bottom: 56px;
+  }
+  @media (min-width: 640px) { .section-head { flex-direction: row; align-items: flex-end; } }
+  .section-head p { color: var(--steel); max-width: 360px; }
+
+  /* ============ Services / cards ============ */
+  .card-grid {
+    display: grid; grid-template-columns: 1fr; gap: 24px;
+  }
+  @media (min-width: 640px) { .card-grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1024px) { .card-grid { grid-template-columns: 1fr 1fr 1fr; } }
+
+  .card {
+    position: relative;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.06), transparent);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 32px;
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(.2,.8,.2,1), box-shadow 0.3s ease;
+  }
+  .card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px -10px rgba(0,0,0,0.45); }
+  .card-glow {
+    position: absolute; right: -24px; top: -24px; width: 112px; height: 112px;
+    border-radius: 50%; filter: blur(28px); transition: opacity 0.2s ease;
+  }
+  .card-glow-blue { background: rgba(0,107,182,0.2); }
+  .card:hover .card-glow-blue { background: rgba(0,107,182,0.35); }
+
+  .card-featured {
+    background: linear-gradient(to bottom, rgba(245,132,38,0.15), transparent);
+    border: 1px solid rgba(245,132,38,0.4);
+  }
+  @media (min-width: 1024px) { .card-featured { transform: translateY(-12px); } }
+  .card-featured .card-glow { background: rgba(245,132,38,0.25); }
+  .card-badge {
+    position: absolute; top: 0; right: 0; background: var(--orange); color: var(--ink);
+    font-family: var(--font-chunky); font-size: 10px; padding: 6px 12px; letter-spacing: 0.05em;
+  }
+
+  .card-eyebrow { font-family: var(--font-mono); font-size: 12px; color: var(--steel-dark); margin-bottom: 20px; }
+  .card-featured .card-eyebrow { color: rgba(245,132,38,0.8); margin-top: 12px; }
+  .card h3 { font-family: var(--font-chunky); font-size: 20px; margin-bottom: 12px; }
+  .card p.card-desc { color: var(--steel); font-size: 14px; line-height: 1.6; margin-bottom: 24px; }
+  .card ul { display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: var(--steel); }
+  .card ul li { display: flex; gap: 8px; }
+  .card ul li::before { content: '▸'; color: var(--orange); }
+
+  .strip-grid {
+    display: grid; grid-template-columns: 1fr; gap: 1px; background: rgba(255,255,255,0.1);
+    margin-top: 24px; border-radius: 16px; overflow: hidden;
+  }
+  @media (min-width: 640px) { .strip-grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1024px) { .strip-grid { grid-template-columns: 1fr 1fr 1fr 1fr; } }
+  .strip-item { background: var(--ink); padding: 24px; transition: background-color 0.2s ease; }
+  .strip-item:hover { background: rgba(255,255,255,0.05); }
+  .strip-icon { font-size: 24px; margin-bottom: 4px; }
+  .strip-title { font-family: var(--font-chunky); font-size: 14px; margin-bottom: 4px; }
+  .strip-sub { color: var(--steel); font-size: 12px; }
+
+  /* ============ Why us ============ */
+  .why-section { background: linear-gradient(to bottom, rgba(255,255,255,0.03), transparent); }
+  .why-grid { display: grid; grid-template-columns: 1fr; gap: 64px; align-items: center; }
+  @media (min-width: 1024px) { .why-grid { grid-template-columns: 1fr 1fr; } }
+  .why-order-2 { order: 2; }
+  .why-order-1 { order: 1; }
+  @media (min-width: 1024px) { .why-order-2 { order: 1; } .why-order-1 { order: 2; } }
+
+  h2.why-title { margin-bottom: 32px; }
+
+  .why-points { display: flex; flex-direction: column; gap: 24px; }
+  .why-point { display: flex; gap: 20px; }
+  .why-num {
+    flex-shrink: 0; width: 48px; height: 48px; border-radius: 8px;
+    background: rgba(0,107,182,0.2); border: 1px solid rgba(0,107,182,0.4);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-chunky); color: var(--blue);
+  }
+  .why-point h3 { font-family: var(--font-chunky); font-size: 16px; margin-bottom: 4px; }
+  .why-point p { color: var(--steel); font-size: 14px; line-height: 1.6; }
+
+  .why-card-wrap { position: relative; }
+  .why-card-texture { position: absolute; inset: 0; opacity: 0.4; border-radius: 24px; }
+  .why-card {
+    position: relative; background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+    border-radius: 24px; padding: 40px; text-align: center; overflow: hidden;
+  }
+  @media (min-width: 640px) { .why-card { padding: 56px; } }
+  .why-card img {
+    width: 176px; margin: 0 auto 24px; border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255,255,255,0.2); background: white;
+  }
+  @media (min-width: 640px) { .why-card img { width: 208px; } }
+  .why-quote { font-size: 24px; line-height: 1.3; margin-bottom: 8px; }
+  @media (min-width: 640px) { .why-quote { font-size: 30px; } }
+  .why-attrib { font-family: var(--font-mono); font-size: 12px; color: rgba(255,255,255,0.7); letter-spacing: 0.05em; }
+
+  /* ============ Process ============ */
+  .process-head { text-align: center; margin-bottom: 64px; }
+  .process-head .eyebrow-label { display: block; }
+  .process-grid {
+    display: grid; grid-template-columns: 1fr; gap: 32px; position: relative;
+  }
+  @media (min-width: 640px) { .process-grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1024px) { .process-grid { grid-template-columns: 1fr 1fr 1fr 1fr; } }
+  .process-line {
+    display: none; position: absolute; top: 32px; left: 12%; right: 12%; height: 1px;
+    background: rgba(255,255,255,0.15);
+  }
+  @media (min-width: 1024px) { .process-line { display: block; } }
+  .process-item { position: relative; text-align: center; }
+  .process-num {
+    width: 64px; height: 64px; margin: 0 auto 20px; border-radius: 50%;
+    background: var(--orange); color: var(--ink); font-family: var(--font-chunky); font-size: 20px;
+    display: flex; align-items: center; justify-content: center; position: relative; z-index: 1;
+  }
+  .process-item h3 { font-family: var(--font-chunky); font-size: 14px; margin-bottom: 8px; letter-spacing: 0.05em; }
+  .process-item p { color: var(--steel); font-size: 14px; line-height: 1.6; }
+
+  /* ============ Gallery ============ */
+  .gallery-section { background: rgba(255,255,255,0.03); }
+  .gallery-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+  @media (min-width: 640px) { .gallery-grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1024px) { .gallery-grid { grid-template-columns: 1fr 1fr 1fr; } }
+  .gallery-tile {
+    aspect-ratio: 4/3; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1);
+    display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;
+    transition: transform 0.3s cubic-bezier(.2,.8,.2,1), box-shadow 0.3s ease;
+  }
+  .gallery-tile:hover { transform: translateY(-6px); box-shadow: 0 20px 40px -10px rgba(0,0,0,0.45); }
+  .gallery-blue { background: linear-gradient(135deg, rgba(0,107,182,0.3), var(--ink)); }
+  .gallery-orange { background: linear-gradient(135deg, rgba(245,132,38,0.3), var(--ink)); }
+  .gallery-tile span { position: relative; font-family: var(--font-mono); font-size: 12px; color: var(--steel); letter-spacing: 0.1em; }
+  .gallery-note { text-align: center; color: var(--steel-dark); font-size: 12px; font-family: var(--font-mono); margin-top: 32px; letter-spacing: 0.05em; }
+
+  /* ============ Testimonial ============ */
+  .testimonial-section { background: var(--blue); position: relative; }
+  .testimonial-inner { position: relative; max-width: 800px; margin: 0 auto; padding: 0 20px; text-align: center; }
+  .stars { color: var(--orange); font-size: 20px; margin-bottom: 24px; }
+  .testimonial-quote { font-size: 24px; line-height: 1.3; margin-bottom: 24px; }
+  @media (min-width: 640px) { .testimonial-quote { font-size: 30px; } }
+  .testimonial-attrib { font-family: var(--font-mono); font-size: 12px; color: rgba(255,255,255,0.7); letter-spacing: 0.05em; }
+
+  /* ============ Contact ============ */
+  .contact-box {
+    display: grid; grid-template-columns: 1fr; gap: 48px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.06), transparent);
+    border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 32px; position: relative; overflow: hidden;
+  }
+  @media (min-width: 640px) { .contact-box { padding: 48px; } }
+  @media (min-width: 1024px) { .contact-box { grid-template-columns: 2fr 3fr; } }
+  .contact-glow { position: absolute; bottom: -80px; right: -80px; width: 288px; height: 288px; border-radius: 50%; background: rgba(245,132,38,0.1); filter: blur(60px); }
+
+  .contact-info h2 { margin-bottom: 24px; }
+  .contact-info > p { color: var(--steel); font-size: 14px; line-height: 1.6; margin-bottom: 32px; }
+  .contact-rows { display: flex; flex-direction: column; gap: 20px; }
+  .contact-row { display: flex; align-items: center; gap: 16px; }
+  .contact-icon {
+    width: 44px; height: 44px; border-radius: 8px; background: rgba(0,107,182,0.2);
+    border: 1px solid rgba(0,107,182,0.4); display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .contact-row-label { font-size: 11px; color: var(--steel-dark); font-family: var(--font-mono); }
+  .contact-row a, .contact-row span.value { font-family: var(--font-chunky); font-size: 14px; }
+  .contact-row a:hover { color: var(--orange); }
+
+  .quote-form { display: grid; grid-template-columns: 1fr; gap: 20px; }
+  @media (min-width: 640px) { .quote-form { grid-template-columns: 1fr 1fr; } }
+  .field-full { grid-column: 1 / -1; }
+  .field label {
+    display: block; font-size: 11px; font-family: var(--font-mono); color: var(--steel);
+    margin-bottom: 8px; letter-spacing: 0.05em;
+  }
+  .field input, .field select, .field textarea {
+    width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px; padding: 12px 16px; font-size: 14px; transition: border-color 0.2s ease;
+  }
+  .field input::placeholder, .field textarea::placeholder { color: var(--steel-dark); }
+  .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--orange); outline: none; }
+  .field textarea { resize: none; }
+  .field select option { background: var(--ink); }
+
+  .submit-btn { width: 100%; padding: 16px 24px; }
+  .form-success {
+    font-size: 12px; font-family: var(--font-mono); color: var(--orange); margin-top: 12px; display: none;
+  }
+  .form-success.show { display: block; }
+
+  /* ============ Footer ============ */
+  footer {
+    background: var(--black); border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 64px 0 32px; position: relative; overflow: hidden;
+  }
+  .footer-texture { position: absolute; inset: 0; opacity: 0.05; }
+  .footer-grid {
+    position: relative; display: grid; grid-template-columns: 1fr; gap: 40px;
+    padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  @media (min-width: 640px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr 1fr 1fr; } }
+  .footer-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .footer-brand img { height: 48px; width: 48px; border-radius: 50%; background: white; object-fit: cover; }
+  .footer-brand-text { font-family: var(--font-chunky); font-size: 14px; line-height: 1.3; }
+  .footer-brand-text span { display: block; color: var(--orange); font-size: 11px; font-family: var(--font-mono); letter-spacing: 0.05em; margin-top: 2px; }
+  .footer-col p { color: var(--steel); font-size: 14px; line-height: 1.6; }
+  .footer-col h4 { font-family: var(--font-chunky); font-size: 12px; letter-spacing: 0.05em; margin-bottom: 16px; color: var(--steel); }
+  .footer-col ul { display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: var(--steel); }
+  .footer-col ul a:hover { color: var(--orange); }
+  .footer-col ul li.muted { color: var(--steel-dark); }
+
+  .footer-bottom {
+    position: relative; display: flex; flex-direction: column; gap: 16px; align-items: center;
+    justify-content: space-between; padding-top: 32px; font-size: 12px; color: var(--steel-dark); font-family: var(--font-mono);
+  }
+  @media (min-width: 640px) { .footer-bottom { flex-direction: row; } }
+  .footer-bottom-links { display: flex; gap: 24px; }
+  .footer-bottom-links a:hover { color: var(--steel); }
+
+  /* reveal animation */
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.in-view { opacity: 1; transform: translateY(0); }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .pulse-dot, .ticker-track { animation: none; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- ============ TOP UTILITY BAR ============ -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <span><span class="dot-orange"></span> Licensed &amp; Insured</span>
+      <span><span class="dot-orange"></span> Free On-Site Estimates</span>
+    </div>
+    <div class="topbar-right">
+      <a href="tel:+10000000000">📞 (000) 000-0000</a>
+      <span class="sep">|</span>
+      <span>Mon–Sat, 7AM–6PM</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="main-header" id="siteHeader">
+  <nav class="navbar container">
+    <a href="#top" class="brand" id="top">
+      <img src="logo.png" alt="Spray Foam Solutions LLC logo" />
+      <div class="brand-text">
+        <div class="brand-title">SPRAY FOAM</div>
+        <div class="brand-sub">SOLUTIONS LLC</div>
+      </div>
+    </a>
+
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#process">Process</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <a href="#contact" class="btn btn-orange badge-notch nav-cta">GET A QUOTE</a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span id="bar1"></span>
+      <span id="bar2"></span>
+      <span id="bar3"></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#services" class="mobile-link">Services</a>
+      <a href="#why" class="mobile-link">Why Us</a>
+      <a href="#process" class="mobile-link">Process</a>
+      <a href="#gallery" class="mobile-link">Gallery</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+      <a href="#contact" class="mobile-link cta-mobile btn btn-orange badge-notch">GET A QUOTE</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="hero">
+  <div class="hero-bg-texture spray-texture spray-fade"></div>
+  <div class="hero-glow"></div>
+
+  <div class="container hero-inner">
+    <div>
+      <div class="eyebrow">
+        <span class="pulse-dot"></span>
+        SEALED FOR EVERY CLIMATE
+      </div>
+
+      <h1 class="hero-title font-display">
+        We Suit Up.<br/>
+        <span class="accent">We Seal Out</span><br/>
+        The Elements.
+      </h1>
+
+      <p class="hero-sub">
+        Open-cell, closed-cell, and rigid foam insulation that locks out air, moisture, and wasted energy bills — applied right the first time, every time.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-orange badge-notch">REQUEST FREE ESTIMATE</a>
+        <a href="#services" class="btn btn-outline badge-notch">VIEW SERVICES</a>
+      </div>
+
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num font-display">15+</div>
+          <div class="stat-label">YEARS SEALING</div>
+        </div>
+        <div class="stat-sep"></div>
+        <div>
+          <div class="stat-num font-display">2,400+</div>
+          <div class="stat-label">JOBS COMPLETED</div>
+        </div>
+        <div class="stat-sep"></div>
+        <div>
+          <div class="stat-num font-display">A+</div>
+          <div class="stat-label">BBB RATING</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-art">
+      <div class="hero-art-glow"></div>
+      <div class="hero-art-card">
+        <img src="logo.png" alt="Spray Foam Solutions LLC — astronaut bear mascot coating the globe in foam" />
+      </div>
+      <div class="hero-tag">
+        <span class="hero-tag-num font-chunky">R-7</span>
+        <span class="hero-tag-label">PER INCH<br/>CLOSED-CELL</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ticker -->
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <div class="ticker-group">
+        <span>ATTICS</span><span style="color:var(--orange)">•</span>
+        <span>CRAWL SPACES</span><span style="color:var(--orange)">•</span>
+        <span>METAL BUILDINGS</span><span style="color:var(--orange)">•</span>
+        <span>NEW CONSTRUCTION</span><span style="color:var(--orange)">•</span>
+        <span>POLE BARNS</span><span style="color:var(--orange)">•</span>
+        <span>RIM JOISTS</span><span style="color:var(--orange)">•</span>
+        <span>COMMERCIAL ROOFING</span><span style="color:var(--orange)">•</span>
+      </div>
+      <div class="ticker-group" aria-hidden="true">
+        <span>ATTICS</span><span style="color:var(--orange)">•</span>
+        <span>CRAWL SPACES</span><span style="color:var(--orange)">•</span>
+        <span>METAL BUILDINGS</span><span style="color:var(--orange)">•</span>
+        <span>NEW CONSTRUCTION</span><span style="color:var(--orange)">•</span>
+        <span>POLE BARNS</span><span style="color:var(--orange)">•</span>
+        <span>RIM JOISTS</span><span style="color:var(--orange)">•</span>
+        <span>COMMERCIAL ROOFING</span><span style="color:var(--orange)">•</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES / PRODUCT SECTION ============ -->
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow-label">// WHAT WE SPRAY</div>
+        <h2 class="section-title font-display">Three Foams.<br/>One Mission.</h2>
+      </div>
+      <p>Each job gets the right foam system for the climate, structure, and budget — not a one-size-fits-all spray.</p>
+    </div>
+
+    <div class="card-grid">
+      <!-- Card 1 -->
+      <div class="card reveal">
+        <div class="card-glow card-glow-blue"></div>
+        <div class="card-eyebrow">01 / OPEN-CELL</div>
+        <h3>Open-Cell Foam</h3>
+        <p class="card-desc">Soft, expansive, and sound-dampening. Ideal for interior walls and attics where airflow control matters more than vapor resistance.</p>
+        <ul>
+          <li>R-3.6 per inch</li>
+          <li>Expands to fill gaps</li>
+          <li>Noise reduction</li>
+        </ul>
+      </div>
+
+      <!-- Card 2 (Featured) -->
+      <div class="card card-featured reveal">
+        <div class="card-badge">MOST REQUESTED</div>
+        <div class="card-glow"></div>
+        <div class="card-eyebrow">02 / CLOSED-CELL</div>
+        <h3>Closed-Cell Foam</h3>
+        <p class="card-desc">Dense and rigid with a built-in vapor barrier. Adds structural strength — the standard for crawl spaces, basements, and roofing.</p>
+        <ul>
+          <li>R-7 per inch</li>
+          <li>Moisture &amp; vapor barrier</li>
+          <li>Adds racking strength</li>
+        </ul>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card reveal">
+        <div class="card-glow card-glow-blue"></div>
+        <div class="card-eyebrow">03 / ROOFING</div>
+        <h3>SPF Roof Systems</h3>
+        <p class="card-desc">Spray polyurethane foam roofing for commercial flat roofs — a seamless, monolithic membrane with zero seams to fail.</p>
+        <ul>
+          <li>Seamless application</li>
+          <li>UV-protective coating</li>
+          <li>20-year warranty options</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Secondary services strip -->
+    <div class="strip-grid">
+      <div class="strip-item">
+        <div class="strip-icon">🏠</div>
+        <div class="strip-title font-chunky">Residential Retrofits</div>
+        <div class="strip-sub">Existing homes, attic-only jobs</div>
+      </div>
+      <div class="strip-item">
+        <div class="strip-icon">🏗️</div>
+        <div class="strip-title font-chunky">New Construction</div>
+        <div class="strip-sub">Builder &amp; contractor partnerships</div>
+      </div>
+      <div class="strip-item">
+        <div class="strip-icon">🏢</div>
+        <div class="strip-title font-chunky">Metal Buildings</div>
+        <div class="strip-sub">Barns, shops, warehouses</div>
+      </div>
+      <div class="strip-item">
+        <div class="strip-icon">🔧</div>
+        <div class="strip-title font-chunky">Removal &amp; Repair</div>
+        <div class="strip-sub">Fix bad foam jobs done elsewhere</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY US ============ -->
+<section id="why" class="why-section section-border-top">
+  <div class="container why-grid">
+    <div class="why-order-2">
+      <div class="eyebrow-label">// WHY HOMEOWNERS PICK US</div>
+      <h2 class="section-title why-title font-display">Built Like It<br/>Has To Survive Space.</h2>
+
+      <div class="why-points">
+        <div class="why-point reveal">
+          <div class="why-num font-chunky">1</div>
+          <div>
+            <h3>Certified Applicators</h3>
+            <p>Every crew member is factory-trained on the rigs we run, not handed a gun on day one.</p>
+          </div>
+        </div>
+        <div class="why-point reveal">
+          <div class="why-num font-chunky">2</div>
+          <div>
+            <h3>Mil-Spec Site Protection</h3>
+            <p>Floors, fixtures, and ductwork get fully masked before a single drop of foam goes airborne.</p>
+          </div>
+        </div>
+        <div class="why-point reveal">
+          <div class="why-num font-chunky">3</div>
+          <div>
+            <h3>Written Energy Estimate</h3>
+            <p>We calculate your projected savings before you sign — no vague promises, real numbers.</p>
+          </div>
+        </div>
+        <div class="why-point reveal">
+          <div class="why-num font-chunky">4</div>
+          <div>
+            <h3>Warranty That Travels With The House</h3>
+            <p>Sell the place in five years? The foam warranty transfers to the new owner automatically.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="why-order-1 why-card-wrap">
+      <div class="why-card-texture spray-texture-blue"></div>
+      <div class="why-card">
+        <img src="logo.png" alt="Spray Foam Solutions LLC mascot" />
+        <p class="why-quote font-display">"If it leaks air,<br/>we don't leave."</p>
+        <p class="why-attrib">— THE CREW MOTTO</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section id="process" class="section-border-top">
+  <div class="container">
+    <div class="process-head">
+      <div class="eyebrow-label">// MISSION SEQUENCE</div>
+      <h2 class="section-title font-display">From Quote To Cured Foam</h2>
+    </div>
+
+    <div class="process-grid">
+      <div class="process-line"></div>
+
+      <div class="process-item">
+        <div class="process-num font-chunky">01</div>
+        <h3>SITE INSPECTION</h3>
+        <p>We measure, assess airflow, and flag moisture issues before quoting a single can.</p>
+      </div>
+      <div class="process-item">
+        <div class="process-num font-chunky">02</div>
+        <h3>FOAM SELECTION</h3>
+        <p>Open-cell, closed-cell, or both — matched to your structure and climate zone.</p>
+      </div>
+      <div class="process-item">
+        <div class="process-num font-chunky">03</div>
+        <h3>SUIT UP &amp; SPRAY</h3>
+        <p>Site is masked, rigs are calibrated, and the crew sprays to exact thickness specs.</p>
+      </div>
+      <div class="process-item">
+        <div class="process-num font-chunky">04</div>
+        <h3>FINAL WALKTHROUGH</h3>
+        <p>We inspect coverage with you on-site and hand over your transferable warranty.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" class="gallery-section section-border-top">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow-label">// RECENT JOBS</div>
+        <h2 class="section-title font-display">Before The Drywall Goes Up</h2>
+      </div>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-tile gallery-blue reveal"><div class="spray-texture" style="position:absolute;inset:0;opacity:0.2"></div><span>ATTIC // CLOSED-CELL</span></div>
+      <div class="gallery-tile gallery-orange reveal"><div class="spray-texture" style="position:absolute;inset:0;opacity:0.2"></div><span>CRAWL SPACE // SEALED</span></div>
+      <div class="gallery-tile gallery-blue reveal"><div class="spray-texture" style="position:absolute;inset:0;opacity:0.2"></div><span>METAL SHOP // OPEN-CELL</span></div>
+      <div class="gallery-tile gallery-orange reveal"><div class="spray-texture" style="position:absolute;inset:0;opacity:0.2"></div><span>ROOF // SPF MEMBRANE</span></div>
+      <div class="gallery-tile gallery-blue reveal"><div class="spray-texture" style="position:absolute;inset:0;opacity:0.2"></div><span>NEW BUILD // RIM JOIST</span></div>
+      <div class="gallery-tile gallery-orange reveal"><div class="spray-texture" style="position:absolute;inset:0;opacity:0.2"></div><span>BARN // FULL ENCAPSULATION</span></div>
+    </div>
+    <p class="gallery-note">JOB PHOTOS AVAILABLE ON REQUEST — ASK YOUR ESTIMATOR</p>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIAL STRIP ============ -->
+<section class="testimonial-section">
+  <div class="spray-texture" style="position:absolute;inset:0;opacity:0.15"></div>
+  <div class="testimonial-inner">
+    <div class="stars">★★★★★</div>
+    <p class="testimonial-quote font-display">
+      "Our heating bill dropped 38% the first winter. The crew treated our attic like it was theirs."
+    </p>
+    <p class="testimonial-attrib">— J. RAMIREZ, RESIDENTIAL CUSTOMER</p>
+  </div>
+</section>
+
+<!-- ============ CONTACT SECTION ============ -->
+<section id="contact" class="section-border-top">
+  <div class="container">
+    <div class="contact-box">
+      <div class="contact-glow"></div>
+
+      <div class="contact-info">
+        <div class="eyebrow-label">// MAKE CONTACT</div>
+        <h2 class="section-title font-display" style="font-size:32px;margin-bottom:24px;">Get Your Free<br/>On-Site Estimate</h2>
+        <p>Tell us about the space and we'll get back to you within one business day with next steps and a ballpark range.</p>
+
+        <div class="contact-rows">
+          <div class="contact-row">
+            <div class="contact-icon">📞</div>
+            <div>
+              <div class="contact-row-label">CALL OR TEXT</div>
+              <a href="tel:+10000000000">(000) 000-0000</a>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <div class="contact-row-label">EMAIL</div>
+              <a href="mailto:info@sprayfoamsolutionsllc.com">info@sprayfoamsolutionsllc.com</a>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-row-label">SERVICE AREA</div>
+              <span class="value">Your City &amp; Surrounding Counties</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form id="quoteForm" class="quote-form">
+        <div class="field">
+          <label for="name">FULL NAME</label>
+          <input id="name" name="name" type="text" required placeholder="Jordan Maple" />
+        </div>
+        <div class="field">
+          <label for="phone">PHONE</label>
+          <input id="phone" name="phone" type="tel" required placeholder="(000) 000-0000" />
+        </div>
+        <div class="field field-full">
+          <label for="email">EMAIL</label>
+          <input id="email" name="email" type="email" required placeholder="you@email.com" />
+        </div>
+        <div class="field field-full">
+          <label for="service">WHAT NEEDS FOAM?</label>
+          <select id="service" name="service">
+            <option>Attic</option>
+            <option>Crawl Space</option>
+            <option>Metal Building</option>
+            <option>New Construction</option>
+            <option>Roofing</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field field-full">
+          <label for="details">PROJECT DETAILS</label>
+          <textarea id="details" name="details" rows="3" placeholder="Square footage, current insulation, timeline..."></textarea>
+        </div>
+        <div class="field-full">
+          <button type="submit" class="btn btn-orange badge-notch submit-btn">SEND REQUEST</button>
+          <p id="formMsg" class="form-success">✓ Request received — we'll be in touch within one business day.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="footer-texture spray-texture"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <img src="logo.png" alt="Spray Foam Solutions LLC logo" />
+          <div class="footer-brand-text">SPRAY FOAM<span>SOLUTIONS LLC</span></div>
+        </div>
+        <p>Air-sealed insulation for homes, barns, and commercial buildings. Suited up since day one.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>NAVIGATE</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>SERVICES</h4>
+        <ul>
+          <li><a href="#services">Open-Cell Foam</a></li>
+          <li><a href="#services">Closed-Cell Foam</a></li>
+          <li><a href="#services">SPF Roofing</a></li>
+          <li><a href="#services">Removal &amp; Repair</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>GET IN TOUCH</h4>
+        <ul>
+          <li><a href="tel:+10000000000">(000) 000-0000</a></li>
+          <li><a href="mailto:info@sprayfoamsolutionsllc.com" style="word-break:break-all;">info@sprayfoamsolutionsllc.com</a></li>
+          <li class="muted">Mon–Sat, 7AM–6PM</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 SPRAY FOAM SOLUTIONS LLC. ALL RIGHTS RESERVED.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  var menuBtn = document.getElementById('menuBtn');
+  var mobileMenu = document.getElementById('mobileMenu');
+  var bar1 = document.getElementById('bar1');
+  var bar2 = document.getElementById('bar2');
+  var bar3 = document.getElementById('bar3');
+  var menuOpen = false;
+
+  function toggleMenu() {
+    menuOpen = !menuOpen;
+    menuBtn.setAttribute('aria-expanded', String(menuOpen));
+    if (menuOpen) {
+      mobileMenu.style.maxHeight = mobileMenu.scrollHeight + 'px';
+      mobileMenu.style.opacity = '1';
+      bar1.style.transform = 'translateY(6px) rotate(45deg)';
+      bar2.style.opacity = '0';
+      bar3.style.transform = 'translateY(-6px) rotate(-45deg)';
+    } else {
+      mobileMenu.style.maxHeight = '0px';
+      mobileMenu.style.opacity = '0';
+      bar1.style.transform = 'none';
+      bar2.style.opacity = '1';
+      bar3.style.transform = 'none';
+    }
+  }
+
+  menuBtn.addEventListener('click', toggleMenu);
+
+  var mobileLinks = document.querySelectorAll('.mobile-link');
+  for (var i = 0; i < mobileLinks.length; i++) {
+    mobileLinks[i].addEventListener('click', function () {
+      if (menuOpen) toggleMenu();
+    });
+  }
+
+  // Sticky header shadow on scroll
+  var header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 10) {
+      header.style.boxShadow = '0 10px 25px rgba(0,0,0,0.4)';
+    } else {
+      header.style.boxShadow = 'none';
+    }
+  });
+
+  // Contact form (front-end only demo handling)
+  var form = document.getElementById('quoteForm');
+  var formMsg = document.getElementById('formMsg');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    formMsg.classList.add('show');
+    form.reset();
+    setTimeout(function () { formMsg.classList.remove('show'); }, 6000);
+  });
+
+  // Scroll-reveal
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(function (el) { observer.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('in-view'); });
+  }
+</script>
+
+</body>
+</html>
