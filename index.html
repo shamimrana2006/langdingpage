@@ -507,6 +507,107 @@
   .footer-bottom-links { display: flex; gap: 24px; }
   .footer-bottom-links a:hover { color: var(--steel); }
 
+
+  /* ============ About section ============ */
+  .about-section { background: linear-gradient(to bottom, rgba(255,255,255,0.02), transparent); }
+  .about-grid {
+    display: grid; grid-template-columns: 1fr; gap: 56px; align-items: center;
+  }
+  @media (min-width: 1024px) { .about-grid { grid-template-columns: 1fr 1fr; } }
+  .about-image-wrap { position: relative; }
+  .about-image-glow {
+    position: absolute; inset: 0; margin: auto; width: 380px; height: 380px;
+    border-radius: 50%; background: rgba(0,107,182,0.15); filter: blur(50px);
+  }
+  .about-image-card {
+    position: relative; background: linear-gradient(135deg, rgba(255,255,255,0.08), transparent);
+    border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 16px;
+    transition: transform 0.4s cubic-bezier(.2,.8,.2,1), box-shadow 0.4s ease;
+  }
+  .about-image-card:hover { transform: translateY(-4px); box-shadow: 0 24px 48px -12px rgba(0,0,0,0.5); }
+  .about-image-card img { width: 100%; border-radius: 12px; }
+  .about-badge-row {
+    display: flex; flex-wrap: wrap; gap: 16px; margin-top: 20px;
+  }
+  .about-badge {
+    display: flex; align-items: center; gap: 10px;
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px; padding: 10px 16px;
+  }
+  .about-badge img { height: 40px; width: auto; border-radius: 4px; }
+  .about-badge span { font-size: 10px; font-family: var(--font-mono); color: var(--steel); letter-spacing: 0.05em; }
+  .about-text h2 { margin-bottom: 20px; }
+  .about-text > p { color: var(--steel); font-size: 15px; line-height: 1.7; margin-bottom: 16px; }
+  .about-text .about-highlight {
+    border-left: 3px solid var(--orange); padding-left: 20px; margin: 28px 0;
+    font-style: italic; color: var(--steel); font-size: 15px; line-height: 1.7;
+  }
+  .about-stats-row {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px;
+  }
+  .about-stat {
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px; padding: 20px; text-align: center;
+  }
+  .about-stat-num { font-family: var(--font-display); font-size: 26px; color: var(--orange); }
+  .about-stat-label { font-family: var(--font-mono); font-size: 10px; color: var(--steel-dark); letter-spacing: 0.08em; }
+
+  /* ============ Projects section ============ */
+  .project-grid {
+    display: grid; grid-template-columns: 1fr; gap: 28px;
+  }
+  @media (min-width: 640px) { .project-grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1024px) { .project-grid { grid-template-columns: 1fr 1fr 1fr 1fr; } }
+  .project-card {
+    position: relative; background: linear-gradient(to bottom, rgba(255,255,255,0.05), transparent);
+    border: 1px solid rgba(255,255,255,0.1); border-radius: 16px;
+    overflow: hidden; transition: transform 0.35s cubic-bezier(.2,.8,.2,1), box-shadow 0.35s ease;
+  }
+  .project-card:hover { transform: translateY(-8px); box-shadow: 0 24px 48px -12px rgba(0,0,0,0.5); }
+  .project-card-image { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+  .project-card-body { padding: 20px 24px 24px; }
+  .project-card-body h3 { font-family: var(--font-chunky); font-size: 16px; margin-bottom: 6px; }
+  .project-card-body p { color: var(--steel); font-size: 13px; line-height: 1.5; }
+  .project-card-tag {
+    position: absolute; top: 12px; left: 12px;
+    background: rgba(0,0,0,0.7); backdrop-filter: blur(4px);
+    font-family: var(--font-mono); font-size: 9px; padding: 4px 10px;
+    border-radius: 4px; letter-spacing: 0.08em; color: var(--orange);
+  }
+
+  /* ============ Working Time section ============ */
+  .hours-section { background: linear-gradient(to bottom, rgba(0,107,182,0.06), transparent); }
+  .hours-grid {
+    display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center;
+  }
+  @media (min-width: 1024px) { .hours-grid { grid-template-columns: 1fr 1fr; } }
+  .hours-image-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  }
+  .hours-image-grid img {
+    width: 100%; border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .hours-image-grid img:hover { transform: scale(1.02); box-shadow: 0 12px 28px -8px rgba(0,0,0,0.4); }
+  .hours-image-grid .img-tall { grid-row: span 2; object-fit: cover; height: 100%; }
+
+  .hours-content h2 { margin-bottom: 12px; }
+  .hours-content > p { color: var(--steel); font-size: 14px; line-height: 1.7; margin-bottom: 32px; max-width: 440px; }
+
+  .hours-table { width: 100%; border-collapse: collapse; margin-bottom: 28px; }
+  .hours-table tr { border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .hours-table tr:last-child { border-bottom: none; }
+  .hours-table td { padding: 14px 8px; font-size: 14px; }
+  .hours-table td:first-child { font-family: var(--font-mono); color: var(--steel-dark); letter-spacing: 0.05em; width: 40%; }
+  .hours-table td:last-child { font-family: var(--font-chunky); text-align: right; }
+  .hours-table .highlight td:last-child { color: var(--orange); }
+  .hours-note {
+    display: flex; align-items: center; gap: 10px;
+    background: rgba(245,132,38,0.1); border: 1px solid rgba(245,132,38,0.2);
+    border-radius: 10px; padding: 14px 20px;
+  }
+  .hours-note span { font-family: var(--font-mono); font-size: 12px; color: var(--orange); letter-spacing: 0.05em; }
+
   /* reveal animation */
   .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
   .reveal.in-view { opacity: 1; transform: translateY(0); }
@@ -550,10 +651,11 @@
     <div class="nav-links">
       <a href="#home">Home</a>
       <a href="#services">Services</a>
-      <a href="#why">Why Us</a>
+      <a href="#about">About</a>
       <a href="#process">Process</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
+      <a href="#projects">Projects</a>
+	      <a href="#gallery">Gallery</a>
+	      <a href="#contact">Contact</a>
     </div>
 
     <a href="#contact" class="btn btn-orange badge-notch nav-cta">GET A QUOTE</a>
@@ -569,8 +671,9 @@
     <div class="mobile-menu-inner">
       <a href="#home" class="mobile-link">Home</a>
       <a href="#services" class="mobile-link">Services</a>
-      <a href="#why" class="mobile-link">Why Us</a>
+      <a href="#about" class="mobile-link">About</a>
       <a href="#process" class="mobile-link">Process</a>
+      <a href="#projects" class="mobile-link">Projects</a>
       <a href="#gallery" class="mobile-link">Gallery</a>
       <a href="#contact" class="mobile-link">Contact</a>
       <a href="#contact" class="mobile-link cta-mobile btn btn-orange badge-notch">GET A QUOTE</a>
@@ -739,6 +842,65 @@
   </div>
 </section>
 
+<!-- ============ ABOUT ============ -->
+<section id="about" class="about-section section-border-top">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image-wrap reveal">
+        <div class="about-image-glow"></div>
+        <div class="about-image-card">
+          <img src="about/GREEN Training usa this certifies that ronald albert.png" alt="GREEN Training USA - Certified Applicator" />
+        </div>
+        <div class="about-badge-row">
+          <div class="about-badge">
+            <img src="about/certified enterprise logo.png" alt="Certified Enterprise Logo" />
+          </div>
+          <div class="about-badge">
+            <span>&#10003; Licensed &amp; Insured</span>
+          </div>
+          <div class="about-badge">
+            <span>&#10003; EPA Certified</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-text">
+        <div class="eyebrow-label">// ABOUT THE CREW</div>
+        <h2 class="section-title font-display">Sealing Spaces<br/>Since <span style="color:var(--orange)">2009</span></h2>
+
+        <p>Spray Foam Solutions LLC was founded on a simple belief: insulation should be done right, or not at all. What started as a two-person crew sealing crawl spaces has grown into a full-service spray foam operation serving homeowners, builders, and commercial property managers across the region.</p>
+
+        <p>We don't subcontract. Every job is performed by our in-house crew — factory-trained applicators who know the rigs inside and out. From attic retrofits to million-dollar new construction projects, the same standard applies: measure twice, spray once, clean up like we were never there.</p>
+
+        <p>Our lead applicator, Ronald Albert, holds a GREEN Training USA Certificate of Completion earned on the 28th day of December 2023 — a testament to our commitment to ongoing training and industry-best practices in spray foam application.</p>
+
+        <div class="about-highlight">
+          &ldquo;If it leaks air, we don't leave. That's not a tagline — it's the rule printed on every work order.&rdquo;
+        </div>
+
+        <div class="about-stats-row">
+          <div class="about-stat">
+            <div class="about-stat-num">2,400+</div>
+            <div class="about-stat-label">JOBS COMPLETED</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-num">15+</div>
+            <div class="about-stat-label">YEARS EXPERIENCE</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-num">99%</div>
+            <div class="about-stat-label">SATISFACTION RATE</div>
+          </div>
+          <div class="about-stat">
+            <div class="about-stat-num">A+</div>
+            <div class="about-stat-label">BBB RATING</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ WHY US ============ -->
 <section id="why" class="why-section section-border-top">
   <div class="container why-grid">
@@ -824,6 +986,54 @@
   </div>
 </section>
 
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="section-border-top">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow-label">// OUR WORK</div>
+        <h2 class="section-title font-display">Projects We've<br/>Suited Up For</h2>
+      </div>
+      <p>Every structure is different. From cozy residential retrofits to large-scale commercial builds — see where our foam went.</p>
+    </div>
+
+    <div class="project-grid">
+      <div class="project-card reveal">
+        <div class="project-card-tag">RESIDENTIAL</div>
+        <img class="project-card-image" src="projects/Residential Homes Providing quality insulation for homes and living spaces..png" alt="Residential Homes - Spray foam insulation for homes" />
+        <div class="project-card-body">
+          <h3>Residential Homes</h3>
+          <p>Providing quality insulation for homes and living spaces. Air-sealed comfort, lower energy bills.</p>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-card-tag">COMMERCIAL</div>
+        <img class="project-card-image" src="projects/Commercial Projects Tailored insulation solutions for various commercial applications..png" alt="Commercial Projects - Spray foam for commercial applications" />
+        <div class="project-card-body">
+          <h3>Commercial Projects</h3>
+          <p>Tailored insulation solutions for various commercial applications. Built to code, sealed to last.</p>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-card-tag">NEW BUILD</div>
+        <img class="project-card-image" src="projects/Construction Buildings Expert spray foam applications for new construction projects..png" alt="Construction Buildings - New construction spray foam" />
+        <div class="project-card-body">
+          <h3>Construction Buildings</h3>
+          <p>Expert spray foam applications for new construction projects. Partnering with builders from foundation to roof.</p>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-card-tag">OFFICE</div>
+        <img class="project-card-image" src="projects/Office Spaces Spray foam solutions for efficient and comfortable office environments..png" alt="Office Spaces - Spray foam for office environments" />
+        <div class="project-card-body">
+          <h3>Office Spaces</h3>
+          <p>Spray foam solutions for efficient and comfortable office environments. Quiet, climate-controlled, energy smart.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ GALLERY ============ -->
 <section id="gallery" class="gallery-section section-border-top">
   <div class="container">
@@ -855,6 +1065,49 @@
       "Our heating bill dropped 38% the first winter. The crew treated our attic like it was theirs."
     </p>
     <p class="testimonial-attrib">— J. RAMIREZ, RESIDENTIAL CUSTOMER</p>
+  </div>
+</section>
+
+<!-- ============ WORKING TIME ============ -->
+<section id="hours" class="hours-section section-border-top">
+  <div class="container">
+    <div class="hours-grid">
+      <div class="hours-image-grid reveal">
+        <img class="img-tall" src="working time/image_508.png" alt="Spray foam application in progress - working on site" />
+        <img src="working time/image_509.png" alt="Spray foam insulation work - job site" />
+        <img src="working time/image_510.png" alt="Spray foam crew working on a project" />
+      </div>
+
+      <div class="hours-content">
+        <div class="eyebrow-label">// ON THE CLOCK</div>
+        <h2 class="section-title font-display">Working Hours<br/>&amp; Availability</h2>
+
+        <p>We keep consistent hours across the work week and offer flexible scheduling for commercial projects that need after-hours or weekend spray times.</p>
+
+        <table class="hours-table">
+          <tr>
+            <td>Monday – Friday</td>
+            <td>7:00 AM – 6:00 PM</td>
+          </tr>
+          <tr>
+            <td>Saturday</td>
+            <td>8:00 AM – 3:00 PM</td>
+          </tr>
+          <tr class="highlight">
+            <td>Sunday</td>
+            <td>Closed</td>
+          </tr>
+          <tr>
+            <td>Emergency / After-Hours</td>
+            <td>Call to arrange</td>
+          </tr>
+        </table>
+
+        <div class="hours-note">
+          <span>⏰ Need a different time? We work around your schedule — just ask.</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -949,8 +1202,9 @@
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#why">Why Us</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#process">Process</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
